@@ -16,6 +16,12 @@ public class JSharePackage implements ReactPackage {
         Logger.SHUTDOWNTOAST = toastFlag;
         Logger.SHUTDOWNLOG = logFlag;
     }
+    
+    // 适配0.61.5的autolink
+    public JSharePackage() {
+        Logger.SHUTDOWNTOAST = false;
+        Logger.SHUTDOWNLOG = false;
+    }
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
